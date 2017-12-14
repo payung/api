@@ -7,6 +7,8 @@ require '/vendor/autoload.php';
 $app = new \Slim\App;
 //ทดลองcomment
 //ไว้ทดสอบ API 
+
+งง โคตร
 $app->get('/hello', function () {
     echo 'ว่าไง';
 
