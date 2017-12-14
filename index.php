@@ -6,7 +6,7 @@ require '/vendor/autoload.php';
 
 $app = new \Slim\App;
 
-// ไว้ทดสอบว่า API ทำงานได้ปกติไหม 
+//ไว้ทดสอบ API 
 $app->get('/hello', function () {
     echo 'ว่าไง';
 
