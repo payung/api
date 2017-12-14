@@ -6,7 +6,7 @@ require '/vendor/autoload.php';
 
 $app = new \Slim\App;
 
-$app->get('/hi', function () {
+$app->get('/hello', function () {
     echo 'ว่าไง';
 
 });
@@ -30,9 +30,7 @@ $app->get('/user/forgetpassword', function () {
 $app->get('/user/editpassword', function () {
     echo '/user/editpassword';
 });
-$app->get('/user/history', function () {
-    echo '/user/history';
-});
+
 $app->get('/dog/post', function () {
     echo '/dog/post';
 });
