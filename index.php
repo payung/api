@@ -5,7 +5,7 @@ use \Psr\Http\Message\ResponseInterface as Response;
 require '/vendor/autoload.php';
 
 $app = new \Slim\App;
-
+//ทดลองcomment
 //ไว้ทดสอบ API 
 $app->get('/hello', function () {
     echo 'ว่าไง';
