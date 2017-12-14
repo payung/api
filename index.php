@@ -9,7 +9,6 @@ $app = new \Slim\App;
 require 'routes/hello.php';
 
 
-
 require 'routes/user.php';
 
 
