@@ -86,4 +86,42 @@ $app->get('/user/editpassword', function () {
         echo json_encode($data);
 });
 
+$app->post('/user2/register', function (Request $request, Response $response ){
+    
+    
+        $data = $request->getParsedBody();
+        $userName = $data['userName'];
+        $surName = $data['surName'];
+    
+        //รันคำสั่ง insert เพื่อเพิ่มห้องใหม่
+    
+        $db = $this ->db;
+        $statement = $db->prepare('INSERT INTO payung.user(name,surname) VALUES(:userName,:surName)');
+        $statement->execute(array(':userName' => $userName,':surName' => $surName ));
+    
+        if($statement->rowCount() > 0){
+            $results = (object) array(
+                "message" => "Insert success",
+                "insert_status" => 1
+    
+            );
+            echo json_encode($results);
+    
+        }
+        else{
+            $results = (object) array(
+                "message" => "Insert nothing",
+                "insert_status" => 0    
+            );
+            echo json_encode($results);
+    
+        }
+        //echo '/rooms/new post'. $roomName;
+    
+    
+    });
+
+
+
+
 ?>
